@@ -1,7 +1,7 @@
 // import React from 'react';
 import { ImageModel } from "../models/imageSchema";
 import Navbar from "../components/Navbar";
-import styles from '../styles/Gallery.module.css'
+import styles from '../styles/gallery.module.css'
 import { useEffect, useState } from "react";
 
 function Gallery({data}) {
