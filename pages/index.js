@@ -19,6 +19,8 @@ export default function Home() {
   useEffect(()=>{
     const body = document.body;
     body.classList.add('scrolling-up')
+
+    alert('Hi there, Jusst want to inform you that this website is still in progress so its not a finished website. \n \n SO don\'t expect all the features that you might see to work')
   },[])
   return (
     <>
