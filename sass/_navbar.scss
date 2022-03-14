@@ -1,0 +1,93 @@
+@use 'asserts' as *;
+
+.navbar{
+    height: 140px;
+    background-color: $blue-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: top 300ms ease-in-out;
+
+    .callToAction{
+        background-color: $primary-color;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color:#e7cc42 ;
+            font-size: 18px;
+        }
+    }
+    .mainNav{
+        height: 100px;
+        padding:0px 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        .logoArea{
+            background-color: #fff;
+            height: 100px;
+            width: 100px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .burgerMenu{
+            // background-color: white;
+            width: 25px;
+            height: fit-content;
+            // height: 20px;
+            display: none;
+            span{
+                display: block;
+                height: 4px;
+                width: 100%;
+                background-color: #fff;
+                &:not(:last-child){
+                    margin-bottom: 3px;
+                }
+            }
+            // &:hover span{
+            //     background: ;
+            // }
+        }
+        .links{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            .active{
+                a{
+                    background-color: darken($color: $blue-color, $amount: 15);
+                    color: #fff;
+                }
+            }
+            li{
+                width: 180px;
+                height: 50px;
+                align-items: center;
+                transition-property: all;
+                transition-duration: 200ms;
+                a{
+                    background-color: lighten($color: $blue-color, $amount: 20);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    // color: #002255;
+                    // display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            li:hover:not(.active)>a{
+                color: #fff;
+                background-color: darken($color: $blue-color, $amount: 5)            }
+        }
+    }
+}

@@ -11,6 +11,32 @@ a {
   text-decoration: none;
 }
 
-* {
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  /* scroll-behavior: smooth; */
+}
+body{
+  /* // height: fit-content;
+  // overflow: hidden; */
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.scrolling-down .navbar{
+  transition-duration: 300ms;
+  top: -150px;
+  opacity: 0;
+}
+.scrolling-up{
+  /* // transform: translate3d(0,0%,0); */
+}
+
+
+
+.active{
+  top: 0;
 }

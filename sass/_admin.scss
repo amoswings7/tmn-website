@@ -1,0 +1,41 @@
+.loader{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before{
+            --hue:240;
+            --saturation:50%;
+            --lightness:50%;
+            content: '';
+            width: 30px;
+            height: 30px;
+            // background: cornflowerblue;
+            border: 5px solid hsla(240, 0%, 0%,0.2);
+            border-top-color: hsl(var(--hue), var(--saturation), var(--lightness));;
+            border-radius: 50%;
+            animation-name: loadingAnimation;
+            animation-duration: 500ms;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    }
+
+}
+
+
+@keyframes loadingAnimation{
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg); 
+    }
+}

@@ -1,0 +1,172 @@
+@use 'asserts' as *;
+
+.contactSection{
+    min-height: 100vh;
+    padding: 20px;
+    background: $tertiary-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >main{
+        max-width:1300px ;
+        width: 100%;
+        height: fit-content;
+        // border: 1px solid #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row wrap;
+        >form{
+            max-width: 500px;
+            min-width: 280px;
+            width: 100%;
+            // position: relative;
+            // border: 1px solid yellow;
+            >h1{
+                // font-size: 36px;
+                font-family: $secondary-font;
+                font-size: 48px;
+                margin-bottom: 50px;
+            }
+            label{
+                display: block;
+                margin-bottom:50px ;
+                max-width: 450px;
+                height: 40px;
+                // overflow: hidden;
+                position: relative;
+                >p{
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;
+                    color: #fff;
+                    padding-left: 20px;
+                    transition: all 300ms ease-in-out;
+                }
+                input,textarea{
+                    width: 100%;
+                    height: 100%;
+                    font-size:18px ;
+                    border: none;
+                    background: lighten($color: $tertiary-color, $amount:10);
+                    border: none;
+                    outline: none;
+                    transition: background 300ms ease-in-out;
+                    color: #fff;
+                    padding-left: 20px;
+                    // word-wrap: break-word;
+                    // word-break: keep-all;
+                }
+                textarea{
+                    min-height: 40px;
+                    height: 40px;
+                    resize: none;
+                    transition: min-height 300ms ease-in-out;
+                }
+                textarea:focus,textarea:valid{
+                    min-height: 120px;
+                    
+                }
+                >input:focus,textarea:focus{
+                    background: lighten($color: $tertiary-color, $amount:80);
+                    color: $tertiary-color;
+                }
+                >input:focus~p,input:valid~p,textarea:focus~p,textarea:valid~p{
+                    transform: translateY(-35px);
+                    padding-left: 0;
+                }
+                input:required,textarea:required{
+                    max-width: 350px;
+                    width: 100%;
+                }
+                
+            }
+            label:nth-child(4){
+                min-height: 40px;
+                height: auto;
+                max-height: 100px;
+                margin-bottom: 50px;
+                // overflow: hidden;
+                transition: all  300ms ease-in-out;
+                input{
+                    height: 40px;
+                    transition: all  300ms ease-in-out;
+                }
+                p{
+                    // position: absolute;
+                    top: 5px;
+                    // left: 100px;
+                }
+                input:focus{
+                    height: 100px;
+                    // background: red;
+                }
+                input:focus~p,input:valid~p{
+                    top:-5px;
+                    // background: red;
+                    // height: 100px;
+                    // background: red;
+                }
+            }
+            label:not(:last-child) input,label>textarea{
+                border-bottom: 3px solid #478EF8;
+            }
+            label:last-child{
+                width: fit-content;
+                // padding: 0 20px;
+                color: #fff;
+                input{
+                    background: $blue-color;
+                    border:none;
+                    width: fit-content;
+                    padding: 0 20px;
+                    color: rgba(255, 255,255, 0.8);
+                    font-size: 24px;
+                    border-left: 8px solid #478EF8;
+                    &:hover{
+                        background-color: lighten($color: $blue-color, $amount: 20);
+                    }
+                }
+            }
+
+        }
+        >div{
+            min-width: 300px;
+            max-width: 350px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column ;
+            .imageArea{
+                width: 300px;
+                height: 300px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            div:last-child{
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    >a{
+                        display: block;
+                        width: 150px;
+                        padding:0 5px;
+                        height: fit-content;
+                        margin: auto;
+                        color: #fff;
+                        background-color: lighten($color: $orange-color, $amount: 0);
+                        i{
+                            color: $tertiary-color;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
